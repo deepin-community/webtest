@@ -1,0 +1,48 @@
+Source: webtest
+Section: python
+Priority: optional
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Piotr Ożarowski <piotr@debian.org>
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: dh-python, python3-all,
+ python3-setuptools, python3-webob,
+# docs & tests
+ python3-sphinx, python3-six, python3-bs4, python3-waitress,
+# tests
+# python-unittest2, python-pyquery
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: https://docs.pylonsproject.org/projects/webtest
+Vcs-Git: https://salsa.debian.org/python-team/packages/webtest.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/webtest
+
+Package: python3-webtest
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, python3-webob,
+ python3-six, python3-waitress (>= 0.8.5), python3-bs4,
+ python3-paste, python3-pastedeploy
+Recommends: python3-lxml
+#, python3-pyquery
+Suggests: python-webtest-doc
+Description: wraps any WSGI application and makes it easy to test
+ WebTest helps you test your WSGI-based web applications. This can be any
+ application that has a WSGI (Web Server Gateway Interface) interface,
+ including an application written in a framework that supports WSGI (which
+ includes most actively developed Python web frameworks – almost anything
+ that even nominally supports WSGI should be testable).
+ .
+ This is the Python 3 version of the package.
+
+Package: python-webtest-doc
+Architecture: all
+Multi-Arch: foreign
+Section: doc
+Depends: ${misc:Depends}, ${sphinxdoc:Depends}
+Breaks: python-webtest (<< 2.0.10-2)
+Replaces: python-webtest (<< 2.0.10-2)
+Description: wraps any WSGI application and makes it easy to test
+ WebTest helps you test your WSGI-based web applications. This can be any
+ application that has a WSGI (Web Server Gateway Interface) interface,
+ including an application written in a framework that supports WSGI (which
+ includes most actively developed Python web frameworks – almost anything
+ that even nominally supports WSGI should be testable).

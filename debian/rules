@@ -1,0 +1,17 @@
+#! /usr/bin/make -f
+
+export PYBUILD_NAME=webtest
+# disable tests, some dependencies are not packaged, f.e. wsgiproxy
+export PYBUILD_DISABLE=test
+
+%:
+	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
+
+override_dh_auto_install:
+	dh_auto_install --buildsystem=pybuild
+	mkdir -p docs/_static # Sphinx needs it
+	dh_installdirs
+	http_proxy='http://127.0.0.1:9/' PYTHONPATH=. python3 -m sphinx -N -q -E -b html docs/ debian/python-webtest-doc/usr/share/doc/python-webtest-doc/
+
+override_dh_installchangelogs:
+	dh_installchangelogs CHANGELOG.rst

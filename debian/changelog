@@ -1,0 +1,274 @@
+webtest (2.0.35-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * New upstream release (closes: 976008)
+  * d/control: Adding Rules-Requires-Root: no
+  * d/control: Mark -doc package as Multi-Arch: foreign
+  * lintian: Adding doc-base file for documentation
+  * lintian: Revert special handling for license.txt
+  * d/control: Update upstream URL (closes: 976006)
+  * d/control: Bump Standards-Version to 4.5.1
+  * d/control: Bump debhelper version to 13
+  * d/copyright: move over to DEP5 format
+  * d/watch: update file version
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 30 Dec 2020 20:10:37 +0100
+
+webtest (2.0.34-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.5.0 (no other changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 22 Mar 2020 23:01:10 +0100
+
+webtest (2.0.32-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+  * Bump Standards-Version to 4.4.0.
+  * Bump Standards-Version to 4.4.1.
+
+  [ Sandro Tosi ]
+  * Drop python2 support; Closes: #938816
+
+ -- Sandro Tosi <morph@debian.org>  Sat, 04 Jan 2020 13:47:17 -0500
+
+webtest (2.0.32-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/watch: Use https protocol
+  * d/control: Remove ancient X-Python-Version field
+  * Convert git repository from git-dpm to gbp layout
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+  * Add patch to use default Sphinx theme (pylons_sphinx_theme is not packaged)
+  * Standards-Version bumped to 4.3.0 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sat, 29 Dec 2018 22:14:13 +0100
+
+webtest (2.0.28-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version bumped to 4.1.1 (no changes needed)
+  * Generate documentation using Python 3's version of sphinx
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 29 Sep 2017 12:52:31 +0200
+
+webtest (2.0.27-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version bumped to 4.0.0 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 20 Jun 2017 20:01:46 +0200
+
+webtest (2.0.24-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 21 Dec 2016 12:45:16 +0100
+
+webtest (2.0.23-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sat, 30 Jul 2016 23:49:18 +0200
+
+webtest (2.0.21-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+  * Standards-Version bumped to 3.9.8
+    - prevent sphinx-build from accessing a network while building docs
+      (closes: 830629)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 18 Jul 2016 21:46:38 +0200
+
+webtest (2.0.20-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 27 Dec 2015 20:25:22 +0100
+
+webtest (2.0.18-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/watch: use pypi.debian.net redirector
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 05 Aug 2015 20:26:20 +0200
+
+webtest (2.0.17-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 21 Dec 2014 21:40:34 +0100
+
+webtest (2.0.16-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version bumped to 3.9.6 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 25 Sep 2014 21:45:51 +0200
+
+webtest (2.0.15-1) unstable; urgency=medium
+
+  * New upstream release
+  * Install upstream changelog (CHANGELOG.rst)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 05 May 2014 22:05:28 +0200
+
+webtest (2.0.14-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 23 Jan 2014 23:12:31 +0100
+
+webtest (2.0.12-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 22 Jan 2014 22:32:04 +0100
+
+webtest (2.0.11-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 12 Jan 2014 19:26:17 +0100
+
+webtest (2.0.10-2) unstable; urgency=medium
+
+  * Add python3-webtest binary package
+  * Move documentation to python-webtest-doc binary package
+  * Switch debian/rules to dh sequencer and pybuild buildsystem
+  * debhelper's compat changed to 9
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 24 Dec 2013 11:10:23 +0100
+
+webtest (2.0.10-1) unstable; urgency=low
+
+  * New upstream release
+  * dh-python added to Build-Depends (so that its dh_python2 can be used)
+  * Standards-Version bumped to 3.9.5 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 01 Dec 2013 20:17:46 +0100
+
+webtest (2.0.9-1) unstable; urgency=low
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+    - bump minimum required Python version to 2.6
+    - add python-six, python-waitress and python-bs4 to Depends
+    - remove python-pastescript from Depends
+    - remove python-simplejson and python-beautifulsoup from Recommends
+    - add python-pyquery to Recommends
+  * Update debian/watch file to check for zip files
+  * Standards-Version bumped to 3.9.4 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 02 Oct 2013 19:37:14 +0200
+
+webtest (1.4.0-1) experimental; urgency=low
+
+  * New upstream release
+  * Upload to experimental due to Wheezy freeze
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 13 Sep 2012 23:34:15 +0200
+
+webtest (1.3.4-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/rules: do not fail if docs/_static exists (closes: #671390)
+  * Standards-Version bumped to 3.9.3 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 06 May 2012 18:54:47 +0200
+
+webtest (1.3.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 21 Nov 2011 21:14:52 +0100
+
+webtest (1.3.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 30 Oct 2011 00:14:04 +0200
+
+webtest (1.3.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 23 Sep 2011 23:19:28 +0200
+
+webtest (1.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Let dh_sphinxdoc handle documentation files, python-sphinx build
+    dependency bumped to 1.0.7+dfsg-1
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 29 Aug 2011 21:12:06 +0200
+
+webtest (1.2.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Add build-arch and build-indep targets to debian/rules
+  * Standards-Version bumped to 3.9.2 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sat, 06 Aug 2011 23:23:32 +0200
+
+webtest (1.2.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Switch from dh_pysupport to dh_python2
+  * Source package format changed to 3.0 (quilt)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sat, 20 Nov 2010 21:59:45 +0100
+
+webtest (1.2.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Standards-Version bumped to 3.9.1 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 22 Oct 2010 15:28:26 +0200
+
+webtest (1.2.1+hg20100419-1) unstable; urgency=low
+
+  * New upstream release
+    - hg snapshot used as tarball didn't contain docs and tests
+  * Standards-Version bumped to 3.8.4 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 19 Apr 2010 22:31:36 +0200
+
+webtest (1.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Standards-Version bumped to 3.8.1 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 28 May 2009 22:19:07 +0200
+
+webtest (1.1-2) unstable; urgency=low
+
+  * Change homepage to http://pythonpaste.org/webtest/ (Closes: #515581)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 20 Feb 2009 20:28:54 +0100
+
+webtest (1.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #506947)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 25 Nov 2008 21:37:36 +0100
